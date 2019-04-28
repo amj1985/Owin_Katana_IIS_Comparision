@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="jquery-3.1.1.min.js" type="application/javascript"></script>
+    <script src="ComparerApi.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        $(document).ready(function () {
+            console.log("ready!");
+            var comparerApi = new ComparerApi();
+            $("#btnSendOwin").click(function () {
+                comparerApi.getOwinAsync();
+            });
+            $("#btnSendIIS").click(function () {
+                comparerApi.getIISAsync();
+            });
+            $("#btnSendOwinSync").click(function () {
+                comparerApi.getOwinAsync();
+            });
+            $("#btnSendIISSync").click(function () {
+                comparerApi.getIISAsync();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" id="btnSendOwin" value="OWIN ASYNC" />
+    <input type="button" id="btnSendIIS" value="IIS ASYNC" />
+    <input type="button" id="btnSendOwinSync" value="OWIN SYNC" />
+    <input type="button" id="btnSendIISSync" value="IIS SYNC" />
+</body>
+
+</html>
